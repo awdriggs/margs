@@ -1,0 +1,35 @@
+<html>
+
+<head>
+  <title>Zesties!</title>
+  <!-- development version, includes helpful console warnings -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="fraction.js"></script>
+</head>
+
+
+<body>
+  <div id="app">
+    <input type="range" min="1" max="10" value="1" class="slider" v-model="margs" @input="update"> {{margs}}
+    <div class="recipe">
+      <div class="tequila">
+        <img src="">
+        <p>{{tequila}} cups</p>
+        <!-- <p>{{tOz}} ounces</p> -->
+      </div>
+      <div class="contreau">
+        <img src="">
+        <p>{{cointreau}} cups</p>
+        <!-- <p>{{cOz}} ounces</p> -->
+      </div>
+      <div class="lime">
+        <img src="">
+        <p>{{lime}} cups</p>
+        <!-- <p>{{lOz}} ounces</p> -->
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>
