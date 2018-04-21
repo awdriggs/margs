@@ -2,30 +2,28 @@
 
 <head>
   <title>Zesties!</title>
+  <link href="https://fonts.googleapis.com/css?family=Bevan" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
   <!-- development version, includes helpful console warnings -->
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="fraction.js"></script>
 </head>
 
-
 <body>
-  <div id="app">
-    <input type="range" min="1" max="10" value="1" class="slider" v-model="margs" @input="update"> {{margs}}
-    <div class="recipe">
-      <div class="tequila">
-        <img src="">
-        <p>{{tequila}} cups</p>
-        <!-- <p>{{tOz}} ounces</p> -->
+  <div class="wrapper">
+    <h1>E+C Zesty</h1>
+    <div id="app">
+      <h1 class="margs">{{margs}}</h1> 
+      <h2>Zesties</h2>
+      <input type="range" min="0" max="10" value="1" class="slider" v-model="margs" @input="update">
+      <div class="recipe" v-if="margs > 0">
+        <div v-for="item in ingredients" class="ingredients">
+          <h3>{{item.name}}</h3>
+          <p>{{item.display}}</p>
+        </div>
       </div>
-      <div class="contreau">
-        <img src="">
-        <p>{{cointreau}} cups</p>
-        <!-- <p>{{cOz}} ounces</p> -->
-      </div>
-      <div class="lime">
-        <img src="">
-        <p>{{lime}} cups</p>
-        <!-- <p>{{lOz}} ounces</p> -->
+      <div v-else>
+        <h3>Why not drink some margs?</h3>
       </div>
     </div>
   </div>
