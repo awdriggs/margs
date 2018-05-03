@@ -1,0 +1,58 @@
+@import 'variables';
+@import 'slider';
+//General and Mobile First 
+
+body {
+  //font
+  color: $lime;
+  font-family: $title;
+  font-size: 10px;
+  margin: 0;
+  text-align: center;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h1, h2 {
+  letter-spacing: 4px;
+  margin: 0;
+}
+
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#app {
+  margin-top: 2rem;
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+    margin-bottom: 0;
+  }
+
+  p {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  .margs {
+    font-size: 6rem;
+    line-height: 0.75;
+  }
+
+  .recipe {
+    display: flex;
+    justify-content: space-around;
+
+    .ingredients {
+      width: 30%;
+    }
+  }
+}
