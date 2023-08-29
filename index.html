@@ -15,7 +15,7 @@
     <div id="app">
       <h1 class="margs">{{margs}}</h1> 
       <h2>Zesties</h2>
-      <input type="range" min="0" max="10" value="1" class="slider" v-model="margs" @input="update">
+      <input type="range" min="0" max="50" value="1" class="slider" v-model="margs" @input="update">
       <div class="recipe" v-if="margs > 0">
         <div v-for="item in ingredients" class="ingredients">
           <h3>{{item.name}}</h3>
